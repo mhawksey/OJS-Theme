@@ -1,16 +1,20 @@
 # Mason Publishing Group Theme for OJS
 
+**This is a fork of MPG for Research in Learning Technology published by the [Association for Learning Technology](https://www.alt.ac.uk)** 
+
 *Currently in Beta*
 
 Responsive and modern theme for OJS journals, created for journals published by the Mason Publishing Group, part of the George Mason University Libraries. The theme is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 
 A big "Thank you!" to [Carleton University Libraries](https://github.com/cu-library/OJS-Modern-Theme) for the example of creating OJS themes with template files.
 
+
+
 ## Installation
 
 To install the mpg theme, upload the theme folder to the plugins/themes directory of your OJS installation. You will then be able to select the Mason Publishing Theme from the dropdown list of available themes.
 
-**Update: You will need to rename the theme folder to `mpg` in order for the theme to install properly.**
+**Update: You will need to rename the theme folder to `mpgAlt` in order for the theme to install properly.**
 
 ## Changing Color Scheme within the OJS interface
 
