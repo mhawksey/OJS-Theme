@@ -64,7 +64,7 @@
 		<p>Hosted by <a href="http://publishing.gmu.edu">Mason Publishing</a>, part of the <a href="http://library.gmu.edu">George Mason University Libraries</a>.</p>
 	</div>
 </div>
-<script type="text/javascript" src="{$baseUrl}/plugins/themes/mpg/js/menu.js"></script>
+<script type="text/javascript" src="{$baseUrl}/plugins/themes/mpgAlt/js/menu.js"></script>
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 {/strip}
 

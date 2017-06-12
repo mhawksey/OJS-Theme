@@ -4,4 +4,6 @@ vendor/
 Gemfile.lock
 
 css/.sass*
+**/_notes
+**/.sass-cache
 

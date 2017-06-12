@@ -17,15 +17,15 @@
 {/strip}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}"><head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<title>{$pageTitleTranslated}</title>
 	<meta name="description" content="{$metaSearchDescription|escape}" />
 	<meta name="keywords" content="{$metaSearchKeywords|escape}" />
 	<meta name="generator" content="{$applicationName} {$currentVersionString|escape}" />
 	{$metaCustomHeaders}
-	{if $displayFavicon}<link rel="icon" href="{$faviconDir}/{$displayFavicon.uploadName|escape:"url"}" type="{$displayFavicon.mimeType|escape}" />{/if}
+	{if $displayFavicon}
+<link rel="icon" href="{$faviconDir}/{$displayFavicon.uploadName|escape:"url"}" type="{$displayFavicon.mimeType|escape}" />{/if}
 	<link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/pkp.css" type="text/css" />
 	<!-- <link rel="stylesheet" href="{$baseUrl}/lib/pkp/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />-->
@@ -66,6 +66,14 @@
 	{else}
 		{include file="common/minifiedScripts.tpl"}
 	{/if}
+
+    <!-- Google Tag Manager -->
+    <script>{literal}(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KHDTWF4');{/literal}</script>
+	<!-- End Google Tag Manager -->
 
 	<!-- Form validation -->
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.js"></script>
@@ -132,7 +140,12 @@
 </head>
 <body id="pkp-{$pageTitle|replace:'.':'-'}">
 <a id="skip-to-content" href="#main">Skip to Main Content</a>
-{include file="common/navbar.tpl"}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHDTWF4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{include file="common/topnavbar.tpl"}
+
 
 <div id="container">
 <div id="header" role="banner">
@@ -162,6 +175,8 @@
 </h1>
 </div>
 </div>
+
+{include file="common/navbar.tpl"}
 
 <div id="body">
 

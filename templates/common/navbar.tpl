@@ -52,7 +52,6 @@
 		{/foreach}
 	</ul>
 
-{include file="common/search.tpl"}
 </div> <!-- End Full Nav -->
 </div>
 
@@ -100,7 +99,6 @@
 				<li class="navItem" id="navItem-{$navItemKey|escape}"><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$baseUrl}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
 			{/if}
 		{/foreach}
-		<li>{include file="common/search.tpl"}</li>
 	</ul>
 </div>
 

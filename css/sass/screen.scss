@@ -1,4 +1,4 @@
-@import "base";
+@import "_base";
 
 @viewport {
   width: device-width;
@@ -38,7 +38,8 @@ html {
 }
 
 body {
-	font-family: "PT Sans", Helvetica, sans-serif;
+	font-family: $font-main;
+	color: #666;
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	background-color: lighten($grey-light, 5%);
@@ -106,34 +107,33 @@ from http://codepen.io/joe-watkins/pen/rjhiK
   background: #4593ff;
 }
 
+.screen_reader{
+	display:none;	
+}
+
 /* Headings */
 
 #{headings(1,6)} {
-	font-family: Lato, Trabuchet, sans-serif;
+	font-family: $font-heading;
+	line-height: 1.8em;
 }
 #{headings(1)} {
 	font-weight: 700;
 	@include adjust-font-size-to(42px);
 }
-#{headings(2,6)} {
-	font-family: Lato, Trebuchet, sans-serif;
-	line-height: 1.8em;
-}
+
 h2 {
 	font-size: 2em;
-	font-weight: 700;
 	padding: .5em 0;
 }
 h3 {
 	font-size: 1.75em;
-	font-weight: 700;
 	padding-left: 5px;
 	background-color: lighten($grey-light, 10%);
 	margin-top: 1em;
 }
 h4 {
 	font-size: 1.5em;
-	font-weight: 400;
 	margin-top: .5em;
 }
 h5 {
@@ -143,13 +143,16 @@ h5 {
 /* Links */
 a {
 	@include hover-link;
-	@include link-colors(lighten($accent-bold, 20%), $accent-light, #primary, $accent-bright, $accent-bold);
+	@include link-colors($accent-bold, $accent-light, $primary, $accent-bright, $accent-bold);
 }
 nav a {
-	@include link-colors(white, $accent-light, $accent-bright, white, $accent-light)
+	@include link-colors(white, $accent-light, $accent-bright, white, $accent-light);
+}
+#navtop a {
+	@include link-colors(white, white, $accent-bright, white, $accent-light);
 }
 #pageFooter a {
-	@include link-colors($accent-light, $accent-bright, $primary, darken($accent-light, 10%), $accent-bright);
+	@include link-colors(#fff, #fff, #fff, #fff, #fff);
 }
 a.action, .button, .options a {
 	@include link-colors(white, white, $accent-contrast, white, white);
@@ -184,7 +187,7 @@ table {
 	width: 100%;
 	margin: 1em 0;
 	th {
-		font-family: Lato;
+		font-family: $font-main;
 		@include adjust-font-size-to(18px);
 		background-color: $grey-light;
 		border-bottom:2px solid $grey-light;
@@ -214,14 +217,13 @@ table {
 
 /* Global Classes 
 ============================= */
-.menu {
+.menu, .menuTop {
 	margin: 0;
 	padding: 0;
 
 	@include horizontal-list-container;
 	li {
 		@include horizontal-list-item(1em, left);
-		border-right: 2px solid $grey-light;
 
 		&:last-child {
 			border-right: none;
@@ -291,7 +293,7 @@ table {
 	form { padding: .25em; margin: .25em 0;}
 }
 .heading {
-	font-family: Lato;
+	font-family: $font-main;
 	@include adjust-font-size-to(18px);
 	background-color: lighten($grey-light, 5%);
 	padding:.25em;
@@ -305,22 +307,55 @@ table {
 
 /* Navigation
 ============================= */
-nav {
+nav,#navtop {
 	width: 100%;
-	background-color: #272822;
+	background-color: $primary;
 	overflow: auto;
+}
+
+#navtop {
+	background-color: #272822;	
 	padding: .5em 0;
 }
+
 #mobileNav {
 	display: none;
 }
-#navbar {
+#navbar,#navbartop {
 	@include container;
 	padding: 0 10px;
 	display: block;
 }
 ul.navMenu {
 	@include span(9);
+	
+
+	li {
+		font-family: $font-heading;
+		text-transform: uppercase;
+		font-weight: 300;
+		padding: .5em 1em;
+		letter-spacing: .05em;
+		-webkit-transition: all .25s ease-in;
+        -moz-transition: all .25s ease-in;
+        transition: all .25s ease-in;
+		&:last-child  {
+			padding-right: 1em;
+		}
+		&:first-child  {
+			padding-left: 1em;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+	}
+	li:hover {
+		background-color: #ddd;
+	}
+}
+
+ul.navMenuTop {
+	@include span(8);
 
 	li {
 		border-right: 3px solid black;
@@ -336,11 +371,31 @@ ul.navMenu {
 #searchbar {
 	@include span (3 last);
 	text-align: right;
+	table {
+		margin:0;
+		td {
+			padding: 0;
+		}
+	}
 	form {
 		margin: 0;
 		input {
 			padding: 2px 6px;
 			margin: 0;
+			width: 100%;
+			font-size: 0.8em;
+		}
+		input[type=submit] {
+			width: 28px;
+			background-image: image-url('search_box_icon.png', false, false);
+			background-repeat: no-repeat;
+			border: 1px solid #fff;
+			border-radius: 2px;
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			margin: 0 4px;
+			background-position: 7px 6px;
+			
 		}
 	}
 }
@@ -462,11 +517,11 @@ ul.navMenu {
 #pageFooter {
 	clear: both;
 	text-align: center;
-	@include leading-border;
-	background-color: lighten($grey-light, 5%);
+	background-color: $grey-bold;
+	color:#fff;
 
 	#social {
-		@include adjust-font-size-to(36px);
+		@include adjust-font-size-to(48px);
 		display: inline-block;
 		line-height: 1em;
 		ul {
@@ -485,7 +540,7 @@ ul.navMenu {
 }
 #standardFooter {
 	@include rhythm-padding();
-	font-family: Lato;
+	font-family: $font-main;
 	font-weight: 400;
 	font-size: .9em;
 	a img {
@@ -629,7 +684,7 @@ table.info {
 	@include rhythm();
 	@include table-scaffolding;
 	.tableHeading {
-		font-family: Lato;
+		font-family: $font-main;
 		@include adjust-font-size-to(18px);
 		background-color: lighten($grey-light, 5%);
 	}

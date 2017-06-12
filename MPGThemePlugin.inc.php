@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/themes/mpg/MPGThemePlugin.inc.php
+ * @file plugins/themes/mpgAlt/MPGThemePlugin.inc.php
  *
  * Copyright (c) 2013-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -26,7 +26,7 @@ class MPGThemePlugin extends ThemePlugin {
 	}
 
 	function getDisplayName() {
-		return 'Mason Publishing Theme';
+		return 'Mason Publishing Theme - ALT';
 	}
 
 	function getDescription() {
@@ -44,7 +44,7 @@ class MPGThemePlugin extends ThemePlugin {
 										. DIRECTORY_SEPARATOR 
 										. 'themes' 
 										. DIRECTORY_SEPARATOR 
-										. 'mpg' 
+										. 'mpgAlt' 
 										. DIRECTORY_SEPARATOR 
 										. 'templates';   
 											      

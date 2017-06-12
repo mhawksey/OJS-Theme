@@ -2,6 +2,15 @@
 - Collapse Top Menu
 */
 
+#searchbar {
+	@include span (6 last);
+}
+ul.navMenuTop {
+	@include span(6);
+}
+nav {
+    background-color: #272822;
+}
 #fullNav {
 	display: none;
 }
@@ -29,6 +38,7 @@
 	.menu {
 		display: none;
 		@include span(12);
+		background-color: #272822;
 
 		li {
 			clear: both;
@@ -47,7 +57,7 @@
 
 			a {
 				display: block;
-				@include link-colors(white, $accent-light, $accent-bright, white, $accent-light);
+				@include link-colors(white, white, $accent-bright, white, white);
 			}
 
 			#searchbar {
