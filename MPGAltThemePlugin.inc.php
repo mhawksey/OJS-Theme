@@ -15,14 +15,14 @@
 
 import('classes.plugins.ThemePlugin');
 
-class MPGThemePlugin extends ThemePlugin {
+class MPGAltThemePlugin extends ThemePlugin {
 	/**
 	 * Get the name of this plugin. The name must be unique within
 	 * its category.
 	 * @return String name of plugin
 	 */
 	function getName() {
-		return 'MPGThemePlugin';
+		return 'MPGAltThemePlugin';
 	}
 
 	function getDisplayName() {
@@ -48,7 +48,7 @@ class MPGThemePlugin extends ThemePlugin {
 										. DIRECTORY_SEPARATOR 
 										. 'templates';   
 											      
-		$templateMgr->compile_id = 'mpgTheme';
+		$templateMgr->compile_id = 'mpgAltTheme';
 	}
 }
 
