@@ -349,7 +349,7 @@ ul.navMenu {
 			text-decoration: none;
 		}
 	}
-	li:hover {
+	li:hover, li:active {
 		background-color: #ddd;
 	}
 }

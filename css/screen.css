@@ -355,7 +355,7 @@ a.action:hover, .button:hover, .action:hover,
 a.action:active, .button:active, .action:active,
 .toggleExtras-inactive:active,
 .toggleExtras-active:active, #setup .options:active, .options a:active {
-  color: #FF6C3E;
+  color: #333;
 }
 
 /* Forms */
@@ -592,7 +592,7 @@ ul.navMenu li:first-child {
 ul.navMenu li a:hover {
   text-decoration: none;
 }
-ul.navMenu li:hover {
+ul.navMenu li:hover, ul.navMenu li:active {
   background-color: #ddd;
 }
 
@@ -1113,7 +1113,7 @@ table.single {
 }
 
 .highlightReviewerConfirmationOverdue {
-  background-color: #FF6C3E;
+  background-color: #333;
 }
 .highlightReviewerConfirmationOverdue:before {
   content: "\2020";
