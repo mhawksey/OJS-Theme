@@ -312,11 +312,7 @@ nav,#navtop {
 	background-color: $primary;
 	overflow: auto;
 }
-#navbar,#navbartop {
-	@include container;
-	padding: 0;
-	display: block;
-}
+
 #navtop {
 	background-color: #272822;	
 	padding: .5em 0;
@@ -333,7 +329,14 @@ nav,#navtop {
 #mobileNav {
 	display: none;
 }
-
+#navbar,#navbartop {
+	@include container;
+	padding: 0;
+	display: block;
+}
+#navbartop {
+	padding: 0 .5em;
+}
 #navbar {
 	background-color: $primary;
 }
@@ -386,6 +389,9 @@ ul.navMenuTop {
 		margin:0;
 		td {
 			padding: 0;
+		}
+		.gsc-submit{
+			width: 36px;
 		}
 	}
 	form {

@@ -11,7 +11,7 @@
       <tbody>
         <tr>
           <td class="gsc-input"><input name="search box" type="search" aria-label="Search" value="" class="textField" /></td>
-          <td><input type="submit" value="" class="button" /></td>
+          <td  class="gsc-submit"><input type="submit" value="" class="button" /></td>
         </tr>
       </tbody>
     </table>
