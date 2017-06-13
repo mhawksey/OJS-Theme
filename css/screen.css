@@ -551,7 +551,7 @@ nav, #navtop {
   padding: .5em 0;
 }
 
-#fullnav {
+#fullNav {
   background-image: linear-gradient(to right, #079948 50%, #ffffff 50%);
   background-image: -o-linear-gradient(left, #079948 50%, #FFF 50%);
   background-image: -moz-linear-gradient(left, #079948 50%, #FFF 50%);
