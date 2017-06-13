@@ -10,13 +10,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}"><head>
 	<title>{$article->getLocalizedTitle()|strip_tags|escape} | {$article->getFirstAuthor(true)|strip_tags|escape} | {$currentJournal->getLocalizedTitle()|strip_tags|escape}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<meta name="description" content="{$article->getLocalizedTitle()|strip_tags|escape}" />
 	{if $article->getLocalizedSubject()}
-		<meta name="keywords" content="{$article->getLocalizedSubject()|escape}" />
+		
+<meta name="keywords" content="{$article->getLocalizedSubject()|escape}" />
 	{/if}
 
 	{if $displayFavicon}<link rel="icon" href="{$faviconDir}/{$displayFavicon.uploadName|escape:"url"}" type="{$displayFavicon.mimeType|escape}" />{/if}
@@ -82,9 +82,9 @@
 	{$additionalHeadData}
 </head>
 <body id="pkp-{$pageTitle|replace:'.':'-'}" class="article">
-
+{include file="common/topnavbar.tpl"}
 <div id="container">
-{include file="common/navbar.tpl"}
+
 <div id="header">
 <div id="headerTitle">
 <figure>
@@ -111,7 +111,7 @@
 </h1>
 </div>
 </div>
-
+{include file="common/navbar.tpl"}
 <div id="body">
 
 {if $leftSidebarCode || $rightSidebarCode}
