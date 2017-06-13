@@ -546,6 +546,19 @@ nav, #navtop {
   overflow: auto;
 }
 
+#navbar, #navbartop {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  display: block;
+}
+#navbar:after, #navbartop:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 #navtop {
   background-color: #272822;
   padding: .5em 0;
@@ -561,19 +574,6 @@ nav, #navtop {
 
 #mobileNav {
   display: none;
-}
-
-#navbar, #navbartop {
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  display: block;
-}
-#navbar:after, #navbartop:after {
-  content: " ";
-  display: block;
-  clear: both;
 }
 
 #navbar {

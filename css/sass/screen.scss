@@ -312,7 +312,11 @@ nav,#navtop {
 	background-color: $primary;
 	overflow: auto;
 }
-
+#navbar,#navbartop {
+	@include container;
+	padding: 0;
+	display: block;
+}
 #navtop {
 	background-color: #272822;	
 	padding: .5em 0;
@@ -329,11 +333,7 @@ nav,#navtop {
 #mobileNav {
 	display: none;
 }
-#navbar,#navbartop {
-	@include container;
-	padding: 0;
-	display: block;
-}
+
 #navbar {
 	background-color: $primary;
 }
