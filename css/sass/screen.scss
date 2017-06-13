@@ -318,6 +318,14 @@ nav,#navtop {
 	padding: .5em 0;
 }
 
+#fullnav {
+	background-image: linear-gradient(left, #079948 50%, #FFF 50%);
+    background-image: -o-linear-gradient(left, #079948 50%, #FFF 50%);
+    background-image: -moz-linear-gradient(left, #079948 50%, #FFF 50%);
+    background-image: -webkit-linear-gradient(left, #079948 50%, #FFF 50%);
+    background-image: -ms-linear-gradient(left, #079948 50%, #FFF 50%);
+}
+
 #mobileNav {
 	display: none;
 }
@@ -325,6 +333,9 @@ nav,#navtop {
 	@include container;
 	padding: 0 10px;
 	display: block;
+}
+#navbar {
+	background-color: $primary;
 }
 ul.navMenu {
 	@include span(9);
