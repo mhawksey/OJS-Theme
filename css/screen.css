@@ -659,20 +659,38 @@ ul.navMenuTop li:last-child {
   padding-top: 0em;
   padding-bottom: 0em;
   margin-bottom: 1.5em;
-  min-height: 150px;
-  text-align: center;
+  min-height: 120px;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  color: #079948;
 }
 #header h1, #header img {
   vertical-align: middle;
   display: inline-block;
+  font-weight: normal;
+  font-size: 1.4em;
+  font-family: Georgia, serif;
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+}
+#header h1 {
+  margin-top: 30px;
 }
 
 #headerTitle {
   padding: 1em;
+  text-transform: uppercase;
+}
+#headerTitle ::first-letter {
+  font-size: 1.6em;
 }
 #headerTitle figure {
   max-width: 1080px;
-  margin: 1.69492%;
+  margin: 0;
+  float: right;
 }
 #headerTitle figure img {
   width: 100%;
@@ -765,6 +783,11 @@ ul.navMenuTop li:last-child {
   text-align: center;
   background-color: #333;
   color: #fff;
+}
+#pageFooter .customFooter {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.8em;
 }
 #pageFooter #social {
   font-size: 3em;
@@ -1448,10 +1471,6 @@ td form {
     text-align: center;
   }
 
-  #header {
-    margin-top: 50px;
-  }
-
   #body {
     padding: 0 4%;
   }
@@ -1477,6 +1496,10 @@ td form {
   #main img {
     max-width: 250px;
     height: auto;
+  }
+
+  #header h1 {
+    margin-top: 15px;
   }
 
   #sidebar {
