@@ -1510,8 +1510,12 @@ td form {
     height: auto;
   }
 
-  #header h1 {
-    margin-top: 15px;
+  #header h1, #header img {
+    font-size: 1.1em;
+  }
+
+  #headerTitle ::first-letter {
+    font-size: 1.2em;
   }
 
   #sidebar {
