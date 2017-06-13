@@ -567,7 +567,7 @@ nav, #navtop {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 10px;
+  padding: 0;
   display: block;
 }
 #navbar:after, #navbartop:after {
@@ -1444,14 +1444,13 @@ td form {
     float: left;
     margin-left: 0;
     margin-right: 0;
-    background-color: #272822;
   }
   #mobileNav .menu li {
     clear: both;
     display: block;
     width: 100%;
     text-align: center;
-    border-bottom: 2px solid #333;
+    border-bottom: 1px solid #ccc;
     text-transform: uppercase;
     letter-spacing: .2em;
     margin: 2px 0;
@@ -1532,5 +1531,22 @@ td form {
 
   #issues .list .issueCoverImage, #issues .list .issueDescriptionImage {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 435px) {
+  /* Changes for Mobile:
+  - Collapse sidebar using javascript
+  - Main div spans full width
+  */
+  #header {
+    margin-bottom: 0px;
+  }
+
+  #header h1 {
+    margin-top: 10px;
+  }
+
+  #headerTitle figure img {
+    width: 130px;
   }
 }

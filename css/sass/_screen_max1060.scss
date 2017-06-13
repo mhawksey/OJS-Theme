@@ -39,14 +39,13 @@ nav {
 	.menu {
 		display: none;
 		@include span(12);
-		background-color: #272822;
 
 		li {
 			clear: both;
 			display: block;
 			width: 100%;
 			text-align: center;
-			border-bottom: 2px solid $grey_bold; 
+			border-bottom: 1px solid #ccc;
 			text-transform: uppercase;
 			letter-spacing: .2em;
 			margin: 2px 0;
