@@ -189,7 +189,7 @@
 
 {include file="common/breadcrumbs.tpl"}
 
-<h2>{$pageTitleTranslated}</h2>
+<h2 class="pageTitle">{$pageTitleTranslated}</h2>
 
 {if $pageSubtitle && !$pageSubtitleTranslated}{translate|assign:"pageSubtitleTranslated" key=$pageSubtitle}{/if}
 {if $pageSubtitleTranslated}

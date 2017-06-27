@@ -13,6 +13,8 @@
 {include file="common/header.tpl"}
 {/strip}
 
+
+
 {if $journalDescription}
 	<div id="journalDescription">{$journalDescription}</div>
 {/if}
@@ -49,5 +51,12 @@
 	{include file="issue/view.tpl"}
 {/if}
 
+{literal}
+<style type="text/css">
+	#main h2.pageTitle {
+		display:none;
+	}
+</style>
+{/literal}
 {include file="common/footer.tpl"}
 

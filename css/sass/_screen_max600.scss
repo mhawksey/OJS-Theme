@@ -21,7 +21,7 @@
 	}
 }
 #headerTitle {
-	::first-letter{
+	::first-letter :not(div){
 		font-size: 1.2em;
 	}
 }

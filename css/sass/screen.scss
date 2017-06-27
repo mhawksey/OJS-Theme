@@ -115,7 +115,7 @@ from http://codepen.io/joe-watkins/pen/rjhiK
 
 #{headings(1,6)} {
 	font-family: $font-heading;
-	line-height: 1.8em;
+	line-height: 1.1em;
 }
 #{headings(1)} {
 	font-weight: 700;
@@ -449,7 +449,7 @@ ul.navMenuTop {
 #headerTitle {
 	padding: 1em;
 	text-transform: uppercase;
-	::first-letter{
+	::first-letter :not(div) {
 		font-size: 1.6em;
 	}
 	figure {
@@ -459,6 +459,15 @@ ul.navMenuTop {
 		img {
 			width: 100%;
 			height: auto;
+		}
+	}
+	.sub {
+		font-family: 'Roboto', 'Open Sans', sans-serif;
+		color: #666;
+		font-size: 0.8em;
+		text-transform:none;
+		::first-letter{
+			font-size: 14px;
 		}
 	}
 }
@@ -1012,6 +1021,20 @@ td form {
 .tagit-close .ui-icon.ui-icon-close {
 	display: none;
 }
+
+#cookiesAlert {
+    max-height: 140px;
+    height: auto;
+}
+#cookieAlertText {
+    width: 85%;
+}
+#cookiesAlert #cookieAlertButton {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
 
 /* Mobile 
 ============================ */

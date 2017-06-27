@@ -233,7 +233,7 @@ from http://codepen.io/joe-watkins/pen/rjhiK
 /* Headings */
 h1, h2, h3, h4, h5, .tocTitle, h6 {
   font-family: Roboto, Trabuchet, sans-serif;
-  line-height: 1.8em;
+  line-height: 1.1em;
 }
 
 h1 {
@@ -703,7 +703,7 @@ ul.navMenuTop li:last-child {
   padding: 1em;
   text-transform: uppercase;
 }
-#headerTitle ::first-letter {
+#headerTitle ::first-letter :not(div) {
   font-size: 1.6em;
 }
 #headerTitle figure {
@@ -714,6 +714,15 @@ ul.navMenuTop li:last-child {
 #headerTitle figure img {
   width: 100%;
   height: auto;
+}
+#headerTitle .sub {
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  color: #666;
+  font-size: 0.8em;
+  text-transform: none;
+}
+#headerTitle .sub ::first-letter {
+  font-size: 14px;
 }
 
 /* Sidebars 
@@ -1399,6 +1408,21 @@ td form {
   display: none;
 }
 
+#cookiesAlert {
+  max-height: 140px;
+  height: auto;
+}
+
+#cookieAlertText {
+  width: 85%;
+}
+
+#cookiesAlert #cookieAlertButton {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+}
+
 /* Mobile 
 ============================ */
 @media screen and (max-width: 1060px) {
@@ -1520,7 +1544,7 @@ td form {
     font-size: 1.1em;
   }
 
-  #headerTitle ::first-letter {
+  #headerTitle ::first-letter :not(div) {
     font-size: 1.2em;
   }
 
