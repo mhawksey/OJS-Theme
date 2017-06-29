@@ -341,8 +341,7 @@ nav,#navtop {
 	background-color: $primary;
 }
 ul.navMenu {
-	@include span(9);
-	
+	float:left;
 
 	li {
 		font-family: $font-heading;
