@@ -812,12 +812,15 @@ table.single {
 	}
 }	
 
+#submissions {
+    font-size: 0.8em;
+}
 
-.highlightReviewerNotNotified, .highlightCopyediting {background-color: $accent-bright; &:before {content: "\00b9"; padding: 0 4px;} }
-.highlightNoDecision {background-color: $accent-bold; color: white; &:before {content: "\00b2"; padding: 0 4px;}}
-.highlightReviewerConfirmationOverdue {background-color: $accent-contrast; &:before {content: "\2020"; padding: 0 4px;} }
-.highlightRevisedCopyUploaded, .highlightLayoutEditing {background-color: $accent-light; &:before {content: "\2666"; padding: 0 4px;}}
-.highlightReviewerCompletionOverdue, .higlightProofreading {background-color: $primary; color: white; &:before {content: "\25CA"; padding: 0 4px;}}
+.highlightReviewerNotNotified, .highlightCopyediting {background-color: #FF9999; &:before {content: "\00b9"; padding: 0 4px;} }
+.highlightNoDecision {background-color: #FFE066; &:before {content: "\00b2"; padding: 0 4px;}}
+.highlightRevisedCopyUploaded, .highlightLayoutEditing {background-color: #C2FF85; &:before {content: "\2666"; padding: 0 4px;}}
+.highlightReviewerConfirmationOverdue {background-color: #85E0FF; &:before {content: "\2020"; padding: 0 4px;} }
+.highlightReviewerCompletionOverdue, .higlightProofreading {background-color: #AD85FF; &:before {content: "\25CA"; padding: 0 4px;}}
 
 .highlightCopyediting a, 
 	.highlightLayoutEditing a,

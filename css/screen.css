@@ -1121,8 +1121,12 @@ table.single {
   border-bottom: 1px solid #D1D3D5;
 }
 
+#submissions {
+  font-size: 0.8em;
+}
+
 .highlightReviewerNotNotified, .highlightCopyediting {
-  background-color: #079948;
+  background-color: #FF9999;
 }
 .highlightReviewerNotNotified:before, .highlightCopyediting:before {
   content: "\00b9";
@@ -1130,33 +1134,31 @@ table.single {
 }
 
 .highlightNoDecision {
-  background-color: #079948;
-  color: white;
+  background-color: #FFE066;
 }
 .highlightNoDecision:before {
   content: "\00b2";
   padding: 0 4px;
 }
 
-.highlightReviewerConfirmationOverdue {
-  background-color: #333;
-}
-.highlightReviewerConfirmationOverdue:before {
-  content: "\2020";
-  padding: 0 4px;
-}
-
 .highlightRevisedCopyUploaded, .highlightLayoutEditing {
-  background-color: #079948;
+  background-color: #C2FF85;
 }
 .highlightRevisedCopyUploaded:before, .highlightLayoutEditing:before {
   content: "\2666";
   padding: 0 4px;
 }
 
+.highlightReviewerConfirmationOverdue {
+  background-color: #85E0FF;
+}
+.highlightReviewerConfirmationOverdue:before {
+  content: "\2020";
+  padding: 0 4px;
+}
+
 .highlightReviewerCompletionOverdue, .higlightProofreading {
-  background-color: #079948;
-  color: white;
+  background-color: #AD85FF;
 }
 .highlightReviewerCompletionOverdue:before, .higlightProofreading:before {
   content: "\25CA";
