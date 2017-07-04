@@ -40,7 +40,7 @@
 		{/if}
 
 		{if $enableAnnouncements}
-			<li id="announcements"><a href="{url page="announcement"}">{translate key="announcement.announcements"}</a></li>
+			<!-- <li id="announcements"><a href="{url page="announcement"}">{translate key="announcement.announcements"}</a></li> -->
 		{/if}{* enableAnnouncements *}
 
 		{call_hook name="Templates::Common::Header::Navbar::CurrentJournal"}
