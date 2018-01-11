@@ -27,7 +27,7 @@
 		{/if}{* $isUserLoggedIn *}
 
 		{if $siteCategoriesEnabled}
-			<li id="categories"><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li>
+			<!-- <li id="categories"><a href="{url journal="index" page="search" op="categories"}">{translate key="navigation.categories"}</a></li> -->
 		{/if}{* $categoriesEnabled *}
 
 		{if !$currentJournal || $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
